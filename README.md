@@ -1,5 +1,13 @@
 # Getting Started with Create React App
+# TAILWIND CSS
+# DAUSIY
+# REACT QUERY
+# LIVE SITE LINK:https://leptop-1d27d.web.app/
+# ADMIN:aa@axx.com
+# PASS: Aaa11@aa
 
+#.TAILWIND CSS
+#. DA
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

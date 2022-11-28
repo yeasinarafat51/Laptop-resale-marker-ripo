@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
@@ -8,6 +9,8 @@ import useToken from '../../hooks/useToken';
 const Signup = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const {createUser, updateUser} = useContext(AuthContext)
+    const {providerLogin} = useContext(AuthContext);
+    const googleprovider = new GoogleAuthProvider();
     const [signUpError, setSignUPError] = useState('');
     const [createdUserEmail, setCreatedUserEmail] = useState('')
 
@@ -16,6 +19,7 @@ const Signup = () => {
     if(token){
         navigate('/');
     }
+
 
     const handleSignUp = (data) =>{
         console.log(data);
@@ -43,7 +47,7 @@ const Signup = () => {
     }
     const saveUser = (name, email, role) =>{
         const user ={name, email,role};
-        fetch('http://localhost:5000/users', {
+        fetch('https://laptop-server-inky.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -56,6 +60,16 @@ const Signup = () => {
             setCreatedUserEmail(email);
             
         })
+    }
+    const handlegooglein = () =>{
+        providerLogin(googleprovider)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+
+        })
+        .catch(error => console.error(error))
+
     }
 
 
@@ -97,7 +111,8 @@ const Signup = () => {
             </form>
             <p>Already have an account <Link className='text-secondary' to="/login">Please Login</Link></p>
             <div className="divider">OR</div>
-            <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+            <button onClick={handlegooglein} className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+            {/* <Button onClick={handlegooglein} className='ms-2'><FaGoogle></FaGoogle>  Google</Button> */}
 
         </div>
     </div>

@@ -20,7 +20,7 @@ const Addseller = () => {
 
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://laptop-server-inky.vercel.app/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json', 

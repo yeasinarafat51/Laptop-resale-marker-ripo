@@ -40,12 +40,12 @@ const DashboardLayout = () => {
         <li><Link to="/dashboard">My Orders</Link></li>
         </>
       } */}
-      {/* {
+      {
         isSeller && <>
          <li><Link to="/dashboard/addproduct">My Product</Link></li>
         <li><Link to="/dashboard/addseller">Add Product</Link></li>
         </>
-      } */}
+      }
       {/* {
         isAdmin && <>
          <li><Link to="/dashboard/allusers">All Buyers</Link></li>
@@ -70,8 +70,6 @@ const DashboardLayout = () => {
         {/* <li><Link to="/dashboard/addseller">Add Product</Link></li> */}
         {/* <li><Link to="/dashboard/addproduct">My Product</Link></li> */}
         <li><Link to="/dashboard/allsellers">All Seller</Link></li>
-        <li><Link to="/dashboard/addproduct">My Product</Link></li>
-        <li><Link to="/dashboard/addseller">Add Product</Link></li>
           </>
         ) : (
           <>
