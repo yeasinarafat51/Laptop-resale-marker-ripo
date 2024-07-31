@@ -62,21 +62,21 @@ const DashboardLayout = () => {
         )
       } */}
      
-     <li><Link to="/dashboard">My Orders</Link></li>
+     <li><Link  className='font-bold' to="/dashboard">My Orders</Link></li>
      
       {isAdmin ? (
           <>
-            <li><Link to="/dashboard/allusers">All Buyers</Link></li>
+            <li><Link  className='font-bold' to="/dashboard/allusers">All Buyers</Link></li>
         {/* <li><Link to="/dashboard/addseller">Add Product</Link></li> */}
         {/* <li><Link to="/dashboard/addproduct">My Product</Link></li> */}
-        <li><Link to="/dashboard/allsellers">All Seller</Link></li>
-        <li><Link to="/dashboard/addproduct">My Product</Link></li>
-        <li><Link to="/dashboard/addseller">Add Product</Link></li>
+        <li><Link  className='font-bold' to="/dashboard/allsellers">All Seller</Link></li>
+        <li><Link  className='font-bold' to="/dashboard/addproduct">My Product</Link></li>
+        <li><Link  className='font-bold' to="/dashboard/addseller">Add Product</Link></li>
           </>
         ) : (
           <>
-           <li><Link to="/dashboard/addproduct">My Product</Link></li>
-        <li><Link to="/dashboard/addseller">Add Product</Link></li>
+           <li><Link  className='font-bold' to="/dashboard/addproduct">My Product</Link></li>
+        <li><Link  className='font-bold' to="/dashboard/addseller">Add Product</Link></li>
           </>
         )
         

@@ -3,7 +3,7 @@ import baner1 from '../../../assets/lal3.jfif'
 
 const Card = () => {
     return (
-        <div className="grid grid-cols-2 bg-base-100 shadow-xl my-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-base-100 shadow-xl my-12">
   <figure className=' flex justify-center'><img className='w-1/2 h-full object-cover' src={baner1}alt="Album"/></figure>
   <div className="card-body">
     <h2 className="card-title">About Us</h2>
