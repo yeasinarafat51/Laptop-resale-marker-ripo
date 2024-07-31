@@ -15,6 +15,7 @@ const Info = ({sel}) => {
       <Link to={`/booking/${_id}`}><button className="btn btn-accent">View Product</button></Link>
     </div>
   </div>
+  
 </div>
     );
 };

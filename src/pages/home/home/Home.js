@@ -3,6 +3,7 @@ import Banner from '../banner/Banner';
 import Card from '../card/Card';
 import Infocards from '../infocard/Infocards';
 import Coursel from '../card/Coursel';
+import Cataswip from '../infocard/Cataswip';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Banner></Banner>
             <Card></Card>
             <Infocards></Infocards>
+            <Cataswip></Cataswip>
         </div>
     );
 };

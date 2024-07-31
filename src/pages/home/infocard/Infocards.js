@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Info from './Info';
 
+
 const Infocards = () => {
     const [sels, setsel] = useState([]);
     
@@ -10,7 +11,7 @@ const Infocards = () => {
         .then(res=> res.json())
         .then(data => setsel(data))
     },[])
-    return (
+    return (<>
         <div className='grid lg:grid-cols-3 gap-3 my-12'>
             {
                 sels?.map(sel =><Info key={sel._id}
@@ -18,6 +19,8 @@ const Infocards = () => {
                 ></Info>)
             }
         </div>
+       
+        </>
     );
 };
 
