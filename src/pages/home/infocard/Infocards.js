@@ -6,12 +6,12 @@ const Infocards = () => {
     
 
     useEffect(()=>{
-        fetch('https://laptop-server-inky.vercel.app/seller')
+        fetch('http://localhost:5000/seller')
         .then(res=> res.json())
         .then(data => setsel(data))
     },[])
     return (
-        <div className='grid lg:grid-cols-3 gap-3'>
+        <div className='grid lg:grid-cols-3 gap-3 my-12'>
             {
                 sels?.map(sel =><Info key={sel._id}
                     sel={sel}

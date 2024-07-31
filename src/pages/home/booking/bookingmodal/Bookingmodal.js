@@ -26,7 +26,7 @@ const Bookingmodal = ({booker, setbooker}) => {
             names
         }
         // console.log(booking)
-        fetch('https://laptop-server-inky.vercel.app/booking', {
+        fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

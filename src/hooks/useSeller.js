@@ -6,7 +6,7 @@ const useSeller = email => {
     const [isSellerLoading, setIsSellerLoading] = useState(true);
     useEffect(() => {
         if (email) {
-            fetch(`https://laptop-server-inky.vercel.app/users/${email}`)
+            fetch(`http://localhost:5000/users/${email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);

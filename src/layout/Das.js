@@ -13,7 +13,7 @@ const DashboardLayout = () => {
 //   const {data: users = [], } = useQuery({
 //     queryKey: ['users'],
 //     queryFn: async() =>{
-//         const res = await fetch('https://laptop-server-inky.vercel.app/users');
+//         const res = await fetch('http://localhost:5000/users');
 //         const data = await res.json();
 //         return data;
 //     }

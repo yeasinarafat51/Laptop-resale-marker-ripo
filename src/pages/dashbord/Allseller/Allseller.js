@@ -8,7 +8,7 @@ const Allseller = () => {
     const {data: sellerses = [], refetch} = useQuery({
         queryKey: ['sellerses'],
         queryFn: async() =>{
-            const res = await fetch('https://laptop-server-inky.vercel.app/sellerses');
+            const res = await fetch('http://localhost:5000/sellerses');
             const data = await res.json();
             return data;
         }
@@ -16,7 +16,7 @@ const Allseller = () => {
     });
     const handleseller = allseller =>{
       console.log(allseller)
-      fetch(`https://laptop-server-inky.vercel.app/users/seller/${allseller._id}`, {
+      fetch(`http://localhost:5000/users/seller/${allseller._id}`, {
           method: 'DELETE', 
           headers: {
               authorization: `bearer ${localStorage.getItem('accessToken')}`

@@ -7,14 +7,14 @@ const Allusers = () => {
     const {data: users = [], refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async() =>{
-            const res = await fetch('https://laptop-server-inky.vercel.app/users');
+            const res = await fetch('http://localhost:5000/users');
             const data = await res.json();
             return data;
         }
 
     });
     const handleMakeAdmin = id => {
-        fetch(`https://laptop-server-inky.vercel.app/users/admin/${id}`, {
+        fetch(`http://localhost:5000/users/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -31,7 +31,7 @@ const Allusers = () => {
     }
     const handleuser = alluser =>{
         console.log(alluser)
-        fetch(`https://laptop-server-inky.vercel.app/users/${alluser._id}`, {
+        fetch(`http://localhost:5000/users/${alluser._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

@@ -11,7 +11,7 @@ const Addproduct = () => {
         queryKey: ['order'],
         queryFn: async () => {
             try{
-                const res = await fetch('https://laptop-server-inky.vercel.app/order', {
+                const res = await fetch('http://localhost:5000/order', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -28,7 +28,7 @@ const Addproduct = () => {
     })
     const handlesuccess = orders =>{
         console.log(orders)
-        fetch(`https://laptop-server-inky.vercel.app/order/${orders._id}`, {
+        fetch(`http://localhost:5000/order/${orders._id}`, {
             method: 'DELETE', 
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

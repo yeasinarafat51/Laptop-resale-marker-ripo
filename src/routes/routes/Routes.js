@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             {
                 path:'/booking/:id',
                 element: <Booking></Booking>,
-                loader: ({params}) => fetch(`https://laptop-server-inky.vercel.app/seller/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/seller/${params.id}`)
             },
             {
                 path:'/blog',

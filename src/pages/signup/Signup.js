@@ -47,7 +47,7 @@ const Signup = () => {
     }
     const saveUser = (name, email, role) =>{
         const user ={name, email,role};
-        fetch('https://laptop-server-inky.vercel.app/users', {
+        fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
